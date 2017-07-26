@@ -211,7 +211,7 @@
 
 	<div class="panel-element">
 		<div class="element-actions">
-			<button class="btn btn-action btn-hide" id="closer"><i class="fa fa-ban"></i></button>
+			<button class="btn btn-action btn-hide"><i class="fa fa-ban"></i></button>
 			<button class="btn btn-action btn-heart"><i class="fa fa-heart-o"></i></button>
 		</div>
 
@@ -235,6 +235,33 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="panel-element">
+		<div class="element-actions">
+			<button class="btn btn-action btn-hide"><i class="fa fa-ban"></i></button>
+			<button class="btn btn-action btn-heart"><i class="fa fa-heart-o"></i></button>
+		</div>
+
+		<div class="element-content">
+			<button class="btn btn-more">
+				<i class="fa fa-ellipsis-h icon-closed"></i>
+				<i class="fa fa-times icon-open"></i>
+				<i class="fa fa-heart-o icon-hearted"></i>
+			</button>
+
+			<div class="content-post">
+				<div class="post-avatar" id="avatar2"></div>
+
+				<div class="post-content">
+					<span class="post-title">Alex & Sierra – Little Did you Know</span>
+					<p class="post-body">Eliza, Pali (SoundCloud)</p>
+          <audio controls>
+            <source src="../static/audio/littledidyouknowcover.mp3" type="audio/mp3">
+          </audio>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -242,16 +269,12 @@
 <script src="//cdn.rawgit.com/hammerjs/jquery.hammer.js/master/jquery.hammer.js"></script>
 <script src="static/js/panel.js"></script>
 <script type="text/javascript">
-  var close = document.getElementById('closer');
-  var audio = document.getElementsByTagName('audio');
-
-  function pauseAudio(){
-    audio.pause();
-  }
-
-  close.addEventListener('onclick', pauseAudio, false);
   $(document).ready(function(){
     $('#avatar1').css('background-image', 'url(../static/img/sampthumb.jpg)');
+		$('#avatar2').css('background-image', 'url(../static/img/littledidyouknow.jpg)');
+		$('button.btn-hide').click(function(){
+			$('audio').trigger('pause');
+		});
   });
 </script>
   </body>

@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css?family=Righteous";
 .at-section__title {
   margin: 0 0 70px;
   color: #eac0c0;
@@ -407,5 +408,40 @@ h1 {
   }
   .panel .panel-element .element-content .btn-more:hover {
     background-color: transparent;
+  }
+}
+.specialtext {
+  position: relative;
+  left: 0%;
+  top: 0%;
+}
+
+#text {
+  font-size: 150px;
+  font-family: Righteous;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#fill {
+  -webkit-animation: shift 5s linear infinite;
+          animation: shift 5s linear infinite;
+}
+
+@-webkit-keyframes shift {
+  0% {
+    x: 0;
+  }
+  100% {
+    x: -2000;
+  }
+}
+
+@keyframes shift {
+  0% {
+    x: 0;
+  }
+  100% {
+    x: -2000;
   }
 }
